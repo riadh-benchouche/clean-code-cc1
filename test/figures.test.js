@@ -32,12 +32,28 @@ describe('isFull', () => {
 });
 
 describe('isGrandeSuite', () => {
+    test('returns true if it is a Grande Suite', () => {
+        expect(isGrandeSuite([2, 3, 4, 5, 6])).toBe(true);
+    });
 
+    test('returns false if it is not a Grande Suite', () => {
+        expect(isGrandeSuite([1, 2, 3, 4, 5])).toBe(true);
+    });
+
+    test('returns false if it is not a Grande Suite', () => {
+        expect(isGrandeSuite([1, 2, 3, 4, 6])).toBe(false);
+    });
 });
 
 
 describe('isYams', () => {
+    test('returns true if all dice have the same value', () => {
+        expect(isYams([3, 3, 3, 3, 3])).toBe(true);
+    });
 
+    test('returns false if not all dice have the same value', () => {
+        expect(isYams([1, 2, 3, 4, 5])).toBe(false);
+    });
 });
 
 describe('analyzeRolls', () => {
