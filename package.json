@@ -1,0 +1,15 @@
+{
+  "name": "controle-clean-code",
+  "version": "1.0.0",
+  "description": "cc1",
+  "main": "figures.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
