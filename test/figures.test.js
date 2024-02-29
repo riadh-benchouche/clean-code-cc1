@@ -22,7 +22,13 @@ describe('isCarre', () => {
 });
 
 describe('isFull', () => {
+    test('returns the points and values of brelan and pair if present', () => {
+        expect(isFull([2, 2, 2, 4, 4])).toEqual({points: 30, brelan: 2, paire: 4});
+    });
 
+    test('returns null if no Full is present', () => {
+        expect(isFull([1, 2, 3, 4, 5])).toBeNull();
+    });
 });
 
 describe('isGrandeSuite', () => {
