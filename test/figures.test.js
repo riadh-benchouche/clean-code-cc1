@@ -55,7 +55,36 @@ describe('isYams', () => {
         expect(isYams([1, 2, 3, 4, 5])).toBe(false);
     });
 });
-
 describe('analyzeRolls', () => {
+    test('returns 50 for a YAMS', () => {
+        expect(analyzeRolls([3, 3, 3, 3, 3])).toBe(50);
+    });
 
+    test('returns the points for a Carré', () => {
+        expect(analyzeRolls([3, 3, 3, 3, 6])).toBe(35);
+    });
+
+    test('returns the points for a Full', () => {
+        expect(analyzeRolls([2, 2, 2, 4, 4])).toBe(30);
+    });
+
+    test('returns 40 for a Grande Suite', () => {
+        expect(analyzeRolls([2, 3, 4, 5, 6])).toBe(40);
+    });
+
+    test('returns 40 for a Grande Suite', () => {
+        expect(analyzeRolls([1, 2, 3, 4, 5])).toBe(40);
+    });
+
+    test('returns the points for a Brelan', () => {
+        expect(analyzeRolls([4, 4, 4, 2, 6])).toBe(28);
+    });
+
+    test('returns the sum of the rolls if no figure is present', () => {
+        expect(analyzeRolls([1, 2, 3, 4, 6])).toBe(16);
+    });
+
+    test('returns the sum of the rolls if no figure is present', () => {
+        expect(analyzeRolls([1, 2, 3, 3, 6])).toBe(15);
+    });
 });
