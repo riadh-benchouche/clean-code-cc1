@@ -1,6 +1,5 @@
 const {analyzeRolls, isYams, isCarre, isFull, isGrandeSuite, isBrelan} = require('../figures');
 
-
 describe('isBrelan', () => {
     test('returns the points and value of Brelan if present', () => {
         expect(isBrelan([4, 4, 4, 2, 6])).toEqual({points: 28, value: 4});
