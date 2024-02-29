@@ -12,7 +12,13 @@ describe('isBrelan', () => {
 });
 
 describe('isCarre', () => {
+    test('returns the points and value of Carré if present', () => {
+        expect(isCarre([3, 3, 3, 3, 6])).toEqual({points: 35, value: 3});
+    });
 
+    test('returns null if no Carré is present', () => {
+        expect(isCarre([1, 2, 3, 4, 5])).toBeNull();
+    });
 });
 
 describe('isFull', () => {
